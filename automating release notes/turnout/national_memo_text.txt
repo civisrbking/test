@@ -1,0 +1,34 @@
+#Title 2016 Election Turnout Model
+#Subtitle From: Civis Analytics
+
+# Summary
+
+Civis Analytics has built a turnout model for the November 2016 election. Each registered voter in the country has been assigned a score between 0 and 100 that predicts the likelihood that individual will turn out to vote in November. Registered voters who are most likely to vote have scores near 100 while registered voters who are least likely to vote in November have scores near 0.
+
+These scores are based on prior individual voting behavior, geographic voting trends, and demographic traits of the voter. When combined with other scores (such as support or persuadability), these turnout scores can be used to help target voters for get-out-the-vote (GOTV) and persuasion efforts. The model has been applied to score all registered voters in the Univted States.
+
+The graph below shows the distribution of turnout scores.
+
+#Plot {{{overall_histogram}}}
+
+# Methodology
+When building the model, we examined turnout data from previous elections to determine which individual attributes best predicted voting in presidential elections. We found the following attributes to be the most predictive:
+
+- Individual Vote History - Vote History is easily the most important predictor of future voting propensity: those who have voted in the past are likely to continue voting in the future. For this presidential election, voting in the November 2012 presidential election is the most important predictor of all for turnout likelihood in the November 2016 presidential election.
+- Age - Age is an important demographic predictor for voting propensity. While young voters generally vote at lower rates than older voters, much of this difference in voting propensity is explained simply by accounting for vote history. That said, age does provide a certain additional amount of predictive power and the interaction of age cohort and vote history adds a great deal of predictive power.
+- Party Registration - Independent voters tend to vote at significantly lower rates than voters who register as Democrats or Republicans.
+- Registration Date - Individuals who register closer to election date tend to vote at higher rates than individuals who register months or years beforehand. Registering right before the election generally signals excitement about the election while voters who register significantly before might have just turned 18, moved away in the intervening months, or otherwise be less inclined to vote.
+
+While these were the some of the most predictive factors that went into the model, we ultimately considered dozens of different data sets and hundreds of combinations of variables to produce the most comprehensive and accurate scores possible.
+
+# Validation - Score Distribution by 2012 and 2014 Vote History
+
+The graph below shows the distribution of 2016 turnout scores. The height of the bars represents the number of people in each turnout score category from 0 to 100, and the colors represent three different types of voters:
+
+- Habitual Voters: People who voted in 2012 and 2014 general (in yellow)
+- Sporadic Voters: People who voted in 2012 general but not 2014 general and were eligible (in blue)
+- Non-Voters: People who neither voted in 2012 nor 2014 but were eligible (in gray)
+
+We expect to see that the average score among habitual voters is highest, the average score among non-voters is lowest, and the average score among sporadic voters is in between. The distribution of scores from this model is consistent with this expectation.
+
+#Plot {{{overlap_histogram}}}
